@@ -5,6 +5,8 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { addUser, removeUser } from "../utills/userSlice";
 import { Link, useNavigate } from "react-router";
 import { netflix_logo } from "../utills/Constants";
+import { FaHouseUser } from "react-icons/fa";
+
 
 const Header = () => {
   const user = useSelector((state) => state.user);
@@ -46,7 +48,7 @@ const Header = () => {
 
 
   return (
-    <div className="w-full h-20 z-10 absolute bg-gradient-to-b from-black flex items-center justify-between p-4">
+    <div className=" fixed w-full h-20 z-10  bg-gradient-to-b from-black flex items-center justify-between p-4">
       <Link to='/browse' className="">
         <img
           className="w-36"
@@ -57,8 +59,9 @@ const Header = () => {
 
       {user && (
         <div className="flex items-center gap-2 text-white">
-            <h1>{user.displayName}</h1>
-          <button onClick={handleSignOut}>Sign-out</button>
+             <FaHouseUser size={25} />
+            <h1>Hi,{user.displayName}</h1>
+          <button onClick={handleSignOut}>(Sign-out)</button>
         </div>
       )}
     </div>

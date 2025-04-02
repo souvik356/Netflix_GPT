@@ -11,7 +11,12 @@ export const options = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZmVlMjYzMTE3ODcxMzk1NGZjNzY2NjdkMDNlYTdjMiIsIm5iZiI6MTc0MzU3NjU5MC45MTgwMDAyLCJzdWIiOiI2N2VjZGUwZTNkOGU3NGU1MTgwMTIyOTYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Tx00KNUsuRc5vJTqjIHoGlgag8Ffl1m0q5LbSNm4AiY'
     }
   };
-
+ export const MOVIE_IMAGE_URL = 'https://image.tmdb.org/t/p/w500'
  export const MOVIE_URL = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
  export const VIDEO_URL = 'https://api.themoviedb.org/3/movie/1125899/videos?language=en-US';
+ export const POPULAR_MOVIE_URL = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
+ export const TOP_RATED_MOVIE = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1'
+ export const UPCOMING_MOVIES = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
+
+
 
