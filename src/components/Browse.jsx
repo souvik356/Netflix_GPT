@@ -1,8 +1,15 @@
-import React from 'react'
+import { useSelector } from 'react-redux'
+import useGetNowPlayingMovies from './customHooks/usegetNowPlayingMovies'
+import MainContainer from './MainContainer'
+import SecondaryContainer from './SecondaryContainer'
 
 const Browse = () => {
+  useGetNowPlayingMovies()
   return (
-    <div className='pt-20'>Browse</div>
+    <div className=''>
+      <MainContainer />
+      <SecondaryContainer/>
+    </div>
   )
 }
 

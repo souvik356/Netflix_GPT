@@ -5,6 +5,7 @@ import { auth } from "../utills/Firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utills/userSlice";
 import { useNavigate } from "react-router";
+import { netflix_bg } from "../utills/Constants";
 
 const LoginRegister = () => {
   const [isSignIn, setSetIn] = useState(true);
@@ -20,7 +21,7 @@ const LoginRegister = () => {
   };
   const handleButtonClick = () => {
     const message = validateData(email.current.value, password.current.value);
-    console.log(message);
+    // console.log(message);
     setErrorMessage(message);
     if (message) return;
 
@@ -38,7 +39,6 @@ const LoginRegister = () => {
         updateProfile(user,{displayName:name.current.value}).then(() => {
             const {uid,email,displayName} = user
             dispatch(addUser({uid:uid,displayName: displayName,email:email}))
-            navigate('/browse')
           }).catch((error) => {
             setErrorMessage(error)
           });
@@ -54,9 +54,8 @@ const LoginRegister = () => {
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
         .then((userCredential) => {
           // Signed in
-          console.log(userCredential);
-            navigate('/browse')
-            console.log('logged in successfull',user);
+          // console.log(userCredential);
+          console.log('logged in successfull',user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -70,7 +69,7 @@ const LoginRegister = () => {
   return (
     <div className="relative w-full h-screen bg-black">
       <img
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+        src={netflix_bg}
         className="hidden lg:block"
       />
 
