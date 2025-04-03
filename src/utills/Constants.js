@@ -19,4 +19,8 @@ export const options = {
  export const UPCOMING_MOVIES = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
 
 
-
+export const lang_support =[
+  {id:0,value:'en',lang:'English'},
+  {id:1,value:'hindi',lang:'Hindi'},
+  {id:2,value:'espanol',lang:'Spanish'},
+]

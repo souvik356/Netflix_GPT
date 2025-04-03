@@ -7,7 +7,7 @@ const SecondaryContainer = () => {
   const popularMovieList = useSelector((state)=>state.movie.popularMovies)
   const topRatedMovie = useSelector((state)=> state.movie.topRatedMovies)
   const upComingMovie = useSelector((state)=> state.movie.upcomingMovies)
-  console.log(upComingMovie);
+  // console.log(upComingMovie);
   
   return (
     <div className='bg-black'>

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { auth } from "./utills/Firebase";
 import Browse from "./components/Browse";
 import { addUser, removeUser } from "./utills/userSlice";
+import GptSearchPage from "./components/GptSearchPage";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -20,6 +21,10 @@ function App() {
         {
           path:'/browse',
           element : <Browse/>
+        },
+        {
+          path:'/search',
+          element : <GptSearchPage/>
         }
       ],
     },
